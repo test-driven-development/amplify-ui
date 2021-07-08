@@ -27,7 +27,7 @@
 
     "colors": {
       "text": {
-        "primary": { "value": "{colors.white.value}" },
+        "primary": { "value": "{colors.black.value}" },
         "secondary": { "value": "{colors.black.value}" },
         "tertiary": { "value": "{colors.black.value}" },
         "link": { "value": "{colors.purple.500.value}" }

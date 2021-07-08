@@ -1,0 +1,10 @@
+{
+  "icon": {
+    "error": {
+      "value": "src/icons/error.svg"
+    },
+    "attach_file": {
+      "value": "src/icons/attach_file.svg"
+    }
+  }
+}
