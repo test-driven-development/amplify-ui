@@ -2,8 +2,107 @@
 title: Theme
 ---
 
-import { Colors } from './colors';
+import { Fragment } from '@/components/Fragment';
+import { Callout } from '@/components/Callout';
 
-# Theme
+Amplify UI uses design tokens organized in a theme object which you can use to style every part of Amplify UI. On the web, you can use plain CSS selectors and CSS custom properties (variables) to theme Amplify UI or use framework-specific patterns like a ThemeProvider in React. Our intent is to provide the broadest range of support by not bundling a styling framework with Amplify UI.
 
-<Colors />
+<Callout warning>
+  These docs are very much a work-in-progress and currently very incomplete!
+</Callout>
+
+<Callout info title="What is a design token?">
+  Good question!
+</Callout>
+
+## Installation
+
+<Fragment>
+  {({ platform }) =>
+    import(`../components/authenticator/installation.${platform}.mdx`)
+  }
+</Fragment>
+
+## Getting started
+
+<Fragment>
+  {({ platform }) => import(`./getting-started.${platform}.mdx`)}
+</Fragment>
+
+---
+
+## Theme structure
+
+The theme structure is based on the [System-UI Theme specification](https://system-ui.com/theme/) which defines the top-level name-spaces for organizing design tokens in a theme object. This specification is used in other popular open source UI libraries like Chakra. The System-UI Theme specification only defines the top-level name-spaces so we are adding some extra structure to it.
+
+```javascript
+{
+  colors: {
+    font: {},
+    background: {},
+    border: {},
+    brand: {}
+  },
+  space: {},
+  fontSizes: {},
+  lineHeights: {},
+  borderWidths: {},
+  radii: {},
+  sizes: {},
+  fonts: {},
+  fontWeights: {},
+  shadows: {},
+  transitions: {},
+  time: {},
+
+  // All component theme options will go under the components namespace
+  // and values can reference global theme options above
+  components: {
+    [component name]: {
+      // default component styles
+      [component variation name]: {
+        [component state]: {}
+      }
+    }
+  }
+}
+```
+
+### Globals
+
+### Components
+
+---
+
+## Usage
+
+### CSS
+
+All of the Amplify UI components can be styled with plain CSS or any language that compiles to CSS.
+
+```css
+:root {
+  --amplify-ui-colors-font-primary: #000;
+  --amplify-ui-components-button-padding: 1rem;
+}
+```
+
+### ThemeProvider
+
+### Modify global styles
+
+#### ThemeProvider
+
+#### CSS
+
+### Modify component styles
+
+#### ThemeProvider
+
+#### CSS
+
+### Modify specific component instances
+
+#### ThemeProvider
+
+#### CSS

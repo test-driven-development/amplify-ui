@@ -39,3 +39,27 @@ a > h3::before {
   content: '#';
   @apply absolute -ml-5 text-amazon;
 }
+
+td > code {
+  display: inline-block;
+  padding: 0 0.5rem;
+  background-color: var(--color-grey-lt);
+  border-radius: 0.25rem;
+}
+
+/* TODO: replace this with the real Callout component */
+.callout {
+  display: block;
+  padding-left: 0.75rem;
+  margin-bottom: 1rem;
+  background-color: var(--color-orange-hv);
+}
+
+.callout.info {
+  background-color: var(--color-ink-hv);
+}
+
+.callout > div {
+  padding: 1rem;
+  background-color: #ffffffbf;
+}

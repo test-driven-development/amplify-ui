@@ -41,6 +41,7 @@ module.exports = {
     },
     js: {
       transforms: ['attribute/cti', 'name/cti/kebab'],
+      prefix: CSS_VARIABLE_PREFIX,
       files: [
         {
           destination: 'dist/theme.js',

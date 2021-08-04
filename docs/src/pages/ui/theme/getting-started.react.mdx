@@ -1,0 +1,39 @@
+```javascript
+import React from 'react';
+import { ThemeProvider, extendTheme } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
+
+const myTheme = extendTheme({
+  colors: {
+    brand: {
+      primary: '#ff9900',
+    },
+  },
+});
+
+const App = () => {
+  return <ThemeProvider theme={myTheme}>{/* rest of app */}</ThemeProvider>;
+};
+```
+
+You can also use theme Amplify UI using CSS custom properties (sometimes called variables)
+
+```css
+/* overrides.css */
+:root {
+  --amplify-colors-brand-primary: #ff9900;
+}
+```
+
+```javascript
+import React from 'react';
+import { View, Button, Image } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
+import './overrides.css';
+
+const App = () => {
+  return {
+    /* rest of app */
+  };
+};
+```
