@@ -1,5 +1,5 @@
 import * as React from 'react';
-import theme from '@aws-amplify/ui-theme-base';
+import theme from '@aws-amplify/ui-theme-base/dist/theme-unminified';
 import { View, Flex, Text } from '@aws-amplify/ui-react';
 
 export const FontSizes = () => {
