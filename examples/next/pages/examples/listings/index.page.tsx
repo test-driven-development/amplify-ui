@@ -1,19 +1,13 @@
 import { useState, useEffect } from 'react';
 
-import {
-  Collection,
-  Text,
-  View,
-  Image,
-  Button,
-  IconAccountCircle,
-} from '@aws-amplify/ui-react';
+import { Collection, Text, View } from '@aws-amplify/ui-react';
 import theme from '@aws-amplify/ui-theme-base';
 
 import { ListingCard } from './ListingCard';
 import { ExperienceCard } from './ExperienceCard';
 import { SectionHeading } from './SectionHeading';
 import { experiences, places } from './data';
+import { Logo } from './Logo';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -25,13 +19,9 @@ function App() {
   return (
     <>
       <header className="listing-app-header">
-        <Image src="/listing-logo.svg" alt="lystifying" />
+        <Logo />
 
         <input type="search" placeholder="search" />
-
-        <Button variation="link" size="large">
-          <IconAccountCircle />
-        </Button>
       </header>
 
       <View padding={theme.space.xxl}>

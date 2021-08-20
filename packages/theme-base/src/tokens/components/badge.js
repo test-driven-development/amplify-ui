@@ -6,6 +6,7 @@ module.exports = {
   textAlign: { value: 'center' },
   padding: { value: ['{space.xs.value}', '{space.small.value}'] },
   backgroundColor: { value: '{colors.background.tertiary.value}' },
+  color: { value: '{colors.font.primary}' },
   // An arbitrarily large value to ensure that the left and right sides of the badge are perfectly rounded for any size variation
   borderRadius: { value: '9999px' },
 

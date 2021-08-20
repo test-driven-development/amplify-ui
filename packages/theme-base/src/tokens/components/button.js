@@ -39,6 +39,7 @@ module.exports = {
   // variations
   primary: {
     borderWidth: { value: 0 },
+    borderColor: { value: 'transparent' },
     backgroundColor: { value: '{colors.brand.primary.80.value}' },
     color: { value: '{colors.font.inverse.value}' },
     _disabled: {

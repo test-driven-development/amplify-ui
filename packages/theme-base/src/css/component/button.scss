@@ -61,6 +61,7 @@
   
   &[data-variation='primary'] {
     border-width: var(--amplify-components-button-primary-border-width);
+    border-color: var(--amplify-components-button-primary-border-color);
     background-color: var(
       --amplify-components-button-primary-background-color
     );

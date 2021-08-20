@@ -1,0 +1,147 @@
+:root {
+  --amplify-colors-green-10: hsl(150, 100%, 90%);
+  --amplify-colors-green-20: hsl(150, 100%, 80%);
+  --amplify-colors-green-40: hsl(150, 100%, 70%);
+  --amplify-colors-green-60: hsl(150, 100%, 60%);
+  --amplify-colors-green-80: hsl(150, 100%, 50%);
+  --amplify-colors-green-90: hsl(150, 100%, 40%);
+  --amplify-colors-green-100: hsl(150, 100%, 30%);
+  
+  --amplify-colors-red-10: hsl(0, 100%, 95%);
+  --amplify-colors-red-20: hsl(0, 100%, 80%);
+  --amplify-colors-red-40: hsl(0, 100%, 70%);
+  --amplify-colors-red-60: hsl(0, 100%, 60%);
+  --amplify-colors-red-80: hsl(0, 100%, 50%);
+  --amplify-colors-red-90: hsl(0, 100%, 40%);
+  --amplify-colors-red-100: hsl(0, 100%, 30%);
+  
+  --amplify-colors-blue-10: hsl(220, 100%, 95%);
+  --amplify-colors-blue-20: hsl(220, 100%, 80%);
+  --amplify-colors-blue-40: hsl(220, 100%, 70%);
+  --amplify-colors-blue-60: hsl(220, 100%, 60%);
+  --amplify-colors-blue-80: hsl(220, 100%, 50%);
+  --amplify-colors-blue-90: hsl(220, 100%, 40%);
+  --amplify-colors-blue-100: hsl(220, 100%, 30%);
+  
+  --amplify-colors-teal-10: hsl(190, 100%, 95%);
+  --amplify-colors-teal-20: hsl(190, 100%, 80%);
+  --amplify-colors-teal-40: hsl(190, 100%, 70%);
+  --amplify-colors-teal-60: hsl(190, 100%, 60%);
+  --amplify-colors-teal-80: hsl(190, 100%, 50%);
+  --amplify-colors-teal-90: hsl(190, 100%, 40%);
+  --amplify-colors-teal-100: hsl(190, 100%, 30%);
+  
+  --amplify-colors-brand-primary-10: var(--amplify-colors-green-10);
+  --amplify-colors-brand-primary-20: var(--amplify-colors-green-20);
+  --amplify-colors-brand-primary-40: var(--amplify-colors-green-40);
+  --amplify-colors-brand-primary-60: var(--amplify-colors-green-60);
+  --amplify-colors-brand-primary-80: var(--amplify-colors-green-80);
+  --amplify-colors-brand-primary-90: var(--amplify-colors-green-90);
+  --amplify-colors-brand-primary-100: var(--amplify-colors-green-100);
+  
+  --amplify-colors-brand-secondary-10: var(--amplify-colors-green-10);
+  --amplify-colors-brand-secondary-20: var(--amplify-colors-green-20);
+  --amplify-colors-brand-secondary-40: var(--amplify-colors-green-40);
+  --amplify-colors-brand-secondary-60: var(--amplify-colors-green-60);
+  --amplify-colors-brand-secondary-80: var(--amplify-colors-green-80);
+  --amplify-colors-brand-secondary-90: var(--amplify-colors-green-90);
+  --amplify-colors-brand-secondary-100: var(--amplify-colors-green-100);
+  
+  --amplify-border-widths-small: 4px;
+  --amplify-border-widths-medium: 4px;
+  --amplify-border-widths-large: 8px;
+  
+  --amplify-space-xxs: 0.5rem;
+  --amplify-space-xs: 0.75rem;
+  --amplify-space-small: 1rem;
+  --amplify-space-medium: 2rem;
+  --amplify-space-large: 3rem;
+  --amplify-space-xl: 4rem;
+  --amplify-space-xxl: 5rem;
+  
+  --amplify-font-sizes-xs: 0.875rem;
+  --amplify-font-sizes-small: 1rem;
+  --amplify-font-sizes-medium: 1.125rem;
+  --amplify-font-sizes-large: 1.5rem;
+  --amplify-font-sizes-xl: 1.75rem;
+  --amplify-font-sizes-xxl: 2.25rem;
+  --amplify-font-sizes-xxxl: 3.25rem;
+  --amplify-font-sizes-xxxxl: 4.5rem;
+  
+  --amplify-shadows-medium: 0 2px 8px var(--amplify-colors-shadow-primary);
+  
+  --amplify-radii-small: 0;
+  --amplify-radii-medium: 0;
+  --amplify-radii-large: 0;
+  --amplify-colors-border-primary: #000;
+  --amplify-colors-background-success: var(--amplify-colors-green-80);
+  --amplify-colors-background-error: var(--amplify-colors-red-80);
+  --amplify-colors-background-warning: var(--amplify-colors-orange-80);
+  --amplify-colors-background-info: var(--amplify-colors-blue-80);
+
+  // This should use a reference to a global radii
+  --amplify-components-badge-border-radius: 0;
+  
+  --amplify-components-button-primary-border-width: var(--amplify-border-widths-medium);
+  --amplify-components-button-primary-border-color: black;
+  --amplify-components-button-primary-color: var(--amplify-colors-font-primary);
+  
+  --amplify-components-heading-2-font-weight: bold;
+  --amplify-components-heading-3-font-weight: bold;
+  --amplify-components-heading-4-font-weight: bold;
+  --amplify-components-heading-5-font-weight: bold;
+  
+  --amplify-components-card-border: var(--amplify-border-widths-small) solid var(--amplify-colors-border-primary);
+  
+  --amplify-components-rating-filled-color: var(--amplify-colors-font-primary);
+  --amplify-components-rating-empty-color: var(--amplify-colors-background-tertiary);
+}
+
+
+.amplify-badge {
+  border-radius: 999px;
+  border-width: var(--amplify-border-widths-small);
+  border-style: solid;
+  background: none !important;
+  
+  &[data-variation="info"] {
+    border-color: var(--amplify-colors-background-info);
+    & > .amplify-icon {
+      color: var(--amplify-colors-background-info);
+    }
+  }
+  
+  &[data-variation="success"] {
+    border-color: var(--amplify-colors-background-success);
+    & > .amplify-icon {
+      color: var(--amplify-colors-background-success);
+    }
+  }
+  
+  &[data-variation="error"] {
+    border-color: var(--amplify-colors-background-error);
+    & > .amplify-icon {
+      color: var(--amplify-colors-background-error);
+    }
+  }
+}
+
+.experience-card-text {
+  font-weight: 900;
+  text-shadow: none;
+}
+
+input[type='search'] {
+  border-radius: 5rem;
+  border-color: var(--amplify-colors-background-secondary);
+  border-width: var(--amplify-border-widths-small);
+  border-style: solid;
+  padding: var(--amplify-space-small) var(--amplify-space-large);
+  width: 30rem;
+  background-color: var(--amplify-colors-background-secondary);
+  
+  &:active,
+  &:focus {
+    background-color: var(--amplify-colors-background-primary);
+  }
+}

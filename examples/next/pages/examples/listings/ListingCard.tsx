@@ -39,11 +39,7 @@ export const ListingCard = ({
   hot?: boolean;
   description?: string;
 }) => (
-  <Card
-    padding={theme.space.medium}
-    borderRadius={theme.radii.medium}
-    width="30rem"
-  >
+  <Card width="30rem">
     <Placeholder isLoaded={isLoaded}>
       <Flex direction="column" height="100%">
         <View height="200px">
@@ -54,11 +50,15 @@ export const ListingCard = ({
             objectPosition="center"
             width="100%"
             height="100%"
-            borderRadius={theme.radii.medium}
+            borderRadius="var(--amplify-radii-medium)"
           />
         </View>
-        <Flex direction="column" gap={theme.space.xs} className="flex-grow">
-          <Flex gap={theme.space.xs}>
+        <Flex
+          direction="column"
+          gap="var(--amplify-space-xs)"
+          className="flex-grow"
+        >
+          <Flex gap="var(--amplify-space-xs)">
             {plus ? (
               <Badge variation="success">
                 <IconFavorite /> Favorite
@@ -76,11 +76,14 @@ export const ListingCard = ({
             ) : null}
           </Flex>
 
-          <Flex gap={theme.space.xxs} direction="column">
+          <Flex gap="var(--amplify-space-xxs)" direction="column">
             <Heading level={4}>{title}</Heading>
-            <Flex alignItems="center">
+            <Flex alignItems="center" gap="var(--amplify-space-xxs)">
               <Rating value={rating} maxValue={5} />
-              <Text variation="tertiary" fontSize="0.75rem">
+              <Text
+                variation="tertiary"
+                fontSize="var(--amplify-font-sizes-small)"
+              >
                 {ratingCount} reviews
               </Text>
             </Flex>
