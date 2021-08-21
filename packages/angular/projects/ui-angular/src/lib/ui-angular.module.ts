@@ -15,6 +15,8 @@ import { AmplifySetupTotpComponent } from './components/amplify-setup-totp/ampli
 import { AmplifyForceNewPasswordComponent } from './components/amplify-force-new-password/amplify-force-new-password.component';
 import { AmplifyFederatedSignInComponent } from './components/amplify-federated-sign-in/amplify-federated-sign-in.component';
 import { AmplifyFederatedSignInButtonComponent } from './components/amplify-federated-sign-in-button/amplify-federated-sign-in-button.component';
+import { AmplifyVerifiyUserComponent } from './components/amplify-verifiy-user/amplify-verifiy-user.component';
+import { AmplifyConfirmVerifiyUserComponent } from './components/amplify-confirm-verifiy-user/amplify-confirm-verifiy-user.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { AmplifyFederatedSignInButtonComponent } from './components/amplify-fede
     AmplifyForceNewPasswordComponent,
     AmplifyFederatedSignInComponent,
     AmplifyFederatedSignInButtonComponent,
+    AmplifyVerifiyUserComponent,
+    AmplifyConfirmVerifiyUserComponent,
   ],
   imports: [CommonModule, ReactiveFormsModule],
   exports: [

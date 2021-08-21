@@ -7,8 +7,14 @@ import {
   signOutActor,
   resetPasswordActor,
 } from './actors';
+import { inspect } from '@xstate/inspect';
 import { stopActor } from './actions';
 
+if (typeof window !== 'undefined') {
+  inspect({
+    url: 'https://statecharts.io/inspect',
+  });
+}
 export const authMachine = createMachine<AuthContext, AuthEvent>(
   {
     id: 'auth',

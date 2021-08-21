@@ -1,0 +1,64 @@
+<!-- 
+  Define default contents here
+-->
+<ng-template #verifyUserSubmitButton>
+  <button data-amplify-button type="submit">Verify</button>
+</ng-template>
+
+<ng-template #verifyUserForm>
+  <form data-amplify-form (submit)="onSubmit($event)" (input)="onInput($event)">
+    <fieldset data-amplify-fieldset [disabled]="isPending">
+      <amplify-user-name-alias
+        [initialValue]="username ? username : null"
+        [disabled]="!!username"
+      ></amplify-user-name-alias>
+      <amplify-input
+        name="confirmation_code"
+        type="number"
+        autocomplete="one-time-code"
+      ></amplify-input>
+
+      <div data-amplify-resend>
+        Lost your code? {{ ' ' }}
+        <a data-amplify-link (click)="resend()">Resend Code</a>
+      </div>
+
+      <ng-container *ngFor="let attribute of unverifiedAttributes">
+        <label>
+          <input type="radio" name="unverifiedAttr" [value]="attribute" />
+          {{ attributeMap[attribute]?.label || attribute }}
+        </label>
+      </ng-container>
+
+      <div data-amplify-footer>
+        <div>
+          <a data-amplify-link (click)="skip()">Skip</a>
+        </div>
+        <ng-container
+          [ngTemplateOutlet]="
+            customComponents.verifyUserSubmitButton || verifyUserSubmitButton
+          "
+          [ngTemplateOutletContext]="context()"
+        >
+        </ng-container>
+      </div>
+    </fieldset>
+
+    <amplify-error *ngIf="remoteError">
+      {{ remoteError }}
+    </amplify-error>
+  </form>
+</ng-template>
+
+<!-- 
+  Render verify-user component
+-->
+
+<div data-amplify-container>
+  <h2 data-amplify-header>Confirm Your Account</h2>
+  <ng-container
+    [ngTemplateOutlet]="customComponents.verifyUserForm || verifyUserForm"
+    [ngTemplateOutletContext]="context()"
+  >
+  </ng-container>
+</div>
